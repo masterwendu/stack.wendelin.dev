@@ -19,5 +19,8 @@ module.exports = {
         link: '/android/',
       },
     ],
-  }
+  },
+  plugins: [
+    ['vuepress-plugin-code-copy', true],
+  ]
 }

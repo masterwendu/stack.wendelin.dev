@@ -1,8 +1,3 @@
----
-home: true
-heroText: stack.wendelin.dev
-actionText: Linux documentation
-actionLink: /linux/
----
+# stack.wendelin.dev
 
 My technology stack, applications, OS, config, ...; documented with vue-press

@@ -8,11 +8,10 @@ i3 is the desktop manager of my choice, because it helps a lot to stay focused a
 [[toc]]
 
 ## i3 config
-TODO
+*TODO*
 
 ## i3 hotkeys
-- [ ] TODO
-- [ ] hello
+*TODO*
 
 ## Applications
 ### yay - AUR package manager
