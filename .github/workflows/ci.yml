@@ -1,25 +1,30 @@
-name: Build and deploy documentation
+name: github pages
 on:
   push:
     branches:
-      - master
+    - master
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
       with:
-        persist-credentials: false
-    - name: Create dist folder
-      run: mkdir -p public
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+        node-version: '13.x'
+    - name: Cache dependencies
+      uses: actions/cache@v1
       with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: public
-        TARGET_FOLDER: public
-        BUILD_SCRIPT: yarn install && yarn build
-        # CNAME: stack.wendelin.dev
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - run: npm ci
+    - run: npm run build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
