@@ -20,5 +20,6 @@ jobs:
         BASE_BRANCH: master
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: public
+        TARGET_FOLDER: public
         BUILD_SCRIPT: yarn install && yarn build
         # CNAME: stack.wendelin.dev
