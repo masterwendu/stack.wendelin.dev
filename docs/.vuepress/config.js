@@ -2,7 +2,7 @@ module.exports = {
   base: '/',
   title: 'stack.wendelin.dev',
   description: 'My technology stack, applications, OS, config, ...; documented with vue-press',
-  dist: 'public',
+  dest: 'public',
   themeConfig: {
     sidebar: 'auto',
     nav: [
