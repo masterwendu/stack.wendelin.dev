@@ -22,7 +22,7 @@ jobs:
           ${{ runner.os }}-node-
     - run: yarn install --frozen-lockfile
     - run: yarn build
-    - run: echo 'www.example.com' > public/CNAME
+    - run: echo 'stack.wendelin.dev' > public/CNAME
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
