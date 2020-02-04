@@ -8,7 +8,9 @@ i3 is the desktop manager of my choice, because it helps a lot to stay focused a
 [[toc]]
 
 ## i3 config
-*TODO*
+Instpect and copy [here](i3)
+
+<a href="/assets/i3/config" download>Download</a>
 
 ## i3 hotkeys
 *TODO*
