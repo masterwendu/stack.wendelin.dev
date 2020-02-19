@@ -199,6 +199,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+exec --no-startup-id volumeicon
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id fix_xcursor
 # I don't know what next 2 are doing
