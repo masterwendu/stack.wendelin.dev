@@ -11,12 +11,16 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'Linux applications',
+        text: 'Linux',
         link: '/linux/',
       },
       {
-        text: 'Android apps',
-        link: '/android/',
+        text: 'Cross-Platform',
+        link: '/cross-platform/',
+      },
+      {
+        text: 'Home assistant',
+        link: '/home-assistant/',
       },
     ],
   },
